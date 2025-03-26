@@ -27,12 +27,12 @@ body {
 
 header {
   position: relative;
-  padding: 10rem 1rem 6rem;
+  padding: 12rem 0 4rem;
   text-align: center;
   color: white;
   overflow: hidden;
-  height: 650px;
-  max-height: 650px;
+  height: 700px;
+  max-height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,8 +43,11 @@ header {
 header::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: url('Assets/BG.jpg') center bottom/contain no-repeat;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: url('Assets/BG.jpg') center bottom/cover no-repeat;
   filter: blur(6px) brightness(0.35);
   z-index: 0;
 }
@@ -100,7 +103,7 @@ h2::after {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
-  margin: -6rem auto 2rem;
+  margin: -8rem auto 2rem;
   transition: transform 0.3s ease;
   position: relative;
   z-index: 3;
@@ -153,7 +156,7 @@ nav {
   top: 0;
   width: 100%;
   background: transparent;
-  padding: 0.75rem 1rem;
+  padding: 1rem;
   text-align: center;
   z-index: 4;
 }
@@ -162,9 +165,10 @@ nav a {
   margin: 0 1rem;
   font-weight: bold;
   color: var(--accent);
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.95rem;
 }
 
 /* Animations */
@@ -183,7 +187,7 @@ nav a {
   .profile-pic {
     width: 120px;
     height: 120px;
-    margin-top: -4rem;
+    margin-top: -6rem;
   }
   nav a {
     display: inline-block;
