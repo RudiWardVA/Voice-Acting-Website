@@ -35,7 +35,7 @@ header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('Assets/HeadShot.jpg') center/cover no-repeat;
+  background: url('Assets/BG.jpg') center/cover no-repeat;
   filter: blur(8px) brightness(0.3);
   z-index: 0;
 }
