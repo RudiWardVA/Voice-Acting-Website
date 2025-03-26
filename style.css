@@ -1,74 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rudi Ward - Voice Actor</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header style="background: linear-gradient(to bottom right, #1a1a1a, #0d0d0d);">
-    <h1>Rudi Ward</h1>
-    <p>Actor | Voice Actor | Storyteller</p>
-  </header>
+/* Reset & variables */
+:root {
+  --main-bg: #0d0d0d;
+  --accent: #ffcc00;
+  --text: #f5f5f5;
+  --subtext: #bbb;
+  --font-main: 'Segoe UI', sans-serif;
+}
 
-  <main>
-    <section id="about">
-      <img src="assets/HeadShot.jpg" alt="Rudi Ward Headshot" class="profile-pic" />
-      <h2>About Me</h2>
-      <p>I'm Rudi, a professional Actor and Voice Actor based in the UK. I bring dynamic characters to life with emotional nuance and vocal versatility. My work spans narration, commercial VO, and character acting for games and short films.</p>
-      <p>This is placeholder text. When you're ready, you can replace it with your full biography, background, and training.</p>
-    </section>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <section id="demo">
-      <h2>Demo Reels</h2>
-      <p><em>Upload your MP3s to replace the sample links below.</em></p>
-      <audio controls>
-        <source src="#" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-      <audio controls>
-        <source src="#" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </section>
+body {
+  font-family: var(--font-main);
+  background: var(--main-bg);
+  color: var(--text);
+  line-height: 1.7;
+}
 
-    <section id="work">
-      <h2>Previous Work</h2>
-      <p>This section is a placeholder for your credits in narration, animation, games, or film.</p>
-      <p>Just list titles like so:</p>
-      <p><strong>Narration:</strong><br />"Project Title" – Author/Client</p>
-      <p><strong>Film:</strong><br />"Short Film Name" – Director</p>
-      <p><strong>Games:</strong><br />"Game Title" – Studio/Fan Project</p>
-    </section>
+header {
+  position: relative;
+  padding: 6rem 1rem 4rem;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
-      <p>Phone: (optional)</p>
-      <div class="social-icons">
-        <a href="#">Twitter</a>
-        <a href="#">LinkedIn</a>
-      </div>
-    </section>
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('Assets/HeadShot.jpg') center/cover no-repeat;
+  filter: blur(8px) brightness(0.3);
+  z-index: 0;
+}
 
-    <section id="bio">
-      <h2>Quick Details</h2>
-      <p>Age: —<br />
-         Height: —<br />
-         Hair Colour: —<br />
-         Pronouns: —<br />
-         Location: —</p>
-    </section>
+header h1,
+header p {
+  position: relative;
+  z-index: 1;
+}
 
-    <section id="legal">
-      <h2>Voice Use Policy</h2>
-      <p>I do not consent to the recording, reproduction, or use of my voice for AI training, machine learning, or any artificial intelligence development. Any unauthorized use of my voice for these purposes will be considered a violation of my rights and may result in legal action.</p>
-    </section>
-  </main>
+header h1 {
+  font-size: 3.2rem;
+  margin-bottom: 0.5rem;
+}
 
-  <footer>
-    &copy; 2025 Rudi Ward. All rights reserved.
-  </footer>
-</body>
-</html>
+header p {
+  font-size: 1.3rem;
+  color: var(--subtext);
+}
+
+main {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  margin: 0.3rem auto 0;
+  width: 50px;
+  height: 2px;
+  background: var(--accent);
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  margin: 1rem auto 2rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+audio {
+  width: 100%;
+  max-width: 500px;
+  margin: 1rem auto;
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #111;
+  color: var(--subtext);
+  font-size: 0.9rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem
