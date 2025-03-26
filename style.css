@@ -1,4 +1,4 @@
-/* Reset & variables */
+/\* Reset & variables \*/
 :root {
   --main-bg: #0d0d0d;
   --accent: #ffcc00;
@@ -27,11 +27,11 @@ body {
 
 header {
   position: relative;
-  padding: 22rem 1rem 14rem;
+  padding: 26rem 1rem 14rem;
   text-align: center;
   color: white;
   overflow: hidden;
-  min-height: 1050px;
+  min-height: 1100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -110,7 +110,7 @@ h2::after {
   position: relative;
   z-index: 3;
   background: var(--main-bg);
-  top: -240px;
+  top: -340px;
 }
 
 .profile-pic:hover {
@@ -191,7 +191,7 @@ nav a {
     width: 120px;
     height: 120px;
     margin-top: -4rem;
-    top: -160px;
+    top: -220px;
   }
   nav a {
     display: inline-block;
