@@ -27,11 +27,11 @@ body {
 
 header {
   position: relative;
-  padding: 18rem 1rem 12rem;
+  padding: 22rem 1rem 14rem;
   text-align: center;
   color: white;
   overflow: hidden;
-  min-height: 950px;
+  min-height: 1050px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -105,12 +105,12 @@ h2::after {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
-  margin: -12rem auto 2rem;
+  margin: -16rem auto 2rem;
   transition: transform 0.3s ease;
   position: relative;
   z-index: 3;
   background: var(--main-bg);
-  top: -140px;
+  top: -240px;
 }
 
 .profile-pic:hover {
@@ -191,7 +191,7 @@ nav a {
     width: 120px;
     height: 120px;
     margin-top: -4rem;
-    top: -80px;
+    top: -160px;
   }
   nav a {
     display: inline-block;
