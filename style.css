@@ -1,4 +1,4 @@
-/\* Reset & variables \*/
+/* Reset & variables */
 :root {
   --main-bg: #0d0d0d;
   --accent: #ffcc00;
@@ -48,7 +48,7 @@ header::before {
   height: 100%;
   background: url('Assets/BG.jpg') center center/cover no-repeat;
   background-size: cover;
-  filter: blur(6px) brightness(0.35);
+  filter: blur(6px) brightness(0.4);
   z-index: 0;
 }
 
@@ -100,8 +100,8 @@ h2::after {
 }
 
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
@@ -110,7 +110,7 @@ h2::after {
   position: relative;
   z-index: 3;
   background: var(--main-bg);
-  top: -420px;
+  top: -460px;
 }
 
 .profile-pic:hover {
