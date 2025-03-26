@@ -27,7 +27,7 @@ body {
 
 header {
   position: relative;
-  padding: 12rem 1rem 8rem;
+  padding: 14rem 1rem 10rem;
   text-align: center;
   color: white;
   overflow: hidden;
@@ -47,6 +47,7 @@ header::before {
   width: 100vw;
   height: 100%;
   background: url('Assets/BG.jpg') center center/cover no-repeat;
+  background-size: cover;
   filter: blur(6px) brightness(0.35);
   z-index: 0;
 }
@@ -104,12 +105,12 @@ h2::after {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
-  margin: -3rem auto 2rem;
+  margin: -8rem auto 2rem;
   transition: transform 0.3s ease;
   position: relative;
   z-index: 3;
   background: var(--main-bg);
-  top: -100px;
+  top: -80px;
 }
 
 .profile-pic:hover {
@@ -155,7 +156,7 @@ a:hover {
 /* Navigation */
 nav {
   position: absolute;
-  top: 0;
+  top: 1rem;
   width: 100%;
   background: transparent;
   padding: 1rem;
