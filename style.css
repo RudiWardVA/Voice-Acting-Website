@@ -27,14 +27,14 @@ body {
 
 header {
   position: relative;
-  padding: 16rem 1rem 8rem;
+  padding: 20rem 1rem 8rem;
   text-align: center;
   color: white;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 800px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   z-index: 1;
 }
@@ -46,7 +46,7 @@ header::before {
   left: 0;
   width: 100vw;
   height: 100%;
-  background: url('Assets/BG.jpg') center center/cover no-repeat;
+  background: url('Assets/BG.jpg') center 30% / cover no-repeat;
   filter: blur(6px) brightness(0.35);
   z-index: 0;
 }
@@ -61,8 +61,8 @@ header p {
 
 header h1 {
   font-size: 3.2rem;
-  margin-bottom: 0.2rem;
-  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
 }
 
 header p {
@@ -104,17 +104,16 @@ h2::after {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
-  position: absolute;
-  top: calc(50% - 80px); /* Adjusted to center vertically */
-  left: 50%;
-  transform: translate(-50%, -150%);
-  background: var(--main-bg);
-  z-index: 3;
+  margin: -16rem auto 2rem;
   transition: transform 0.3s ease;
+  position: relative;
+  z-index: 3;
+  background: var(--main-bg);
+  top: -420px;
 }
 
 .profile-pic:hover {
-  transform: translate(-50%, -150%) scale(1.05);
+  transform: scale(1.05);
 }
 
 p {
@@ -190,8 +189,8 @@ nav a {
   .profile-pic {
     width: 120px;
     height: 120px;
-    top: calc(50% - 60px);
-    transform: translate(-50%, -140%);
+    margin-top: -4rem;
+    top: -220px;
   }
   nav a {
     display: inline-block;
