@@ -26,6 +26,8 @@ header {
   text-align: center;
   color: white;
   overflow: hidden;
+  height: 300px;
+  max-height: 300px;
 }
 
 header::before {
@@ -125,4 +127,13 @@ a:hover {
 
 @media (max-width: 768px) {
   header h1 {
-    font-size: 2.2rem
+    font-size: 2.2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+}
