@@ -100,8 +100,8 @@ h2::after {
 }
 
 .profile-pic {
-  width: 220px;
-  height: 220px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
@@ -110,7 +110,7 @@ h2::after {
   position: relative;
   z-index: 3;
   background: var(--main-bg);
-  top: -460px;
+  top: -440px;
 }
 
 .profile-pic:hover {
@@ -188,10 +188,10 @@ nav a {
     font-size: 1rem;
   }
   .profile-pic {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     margin-top: -4rem;
-    top: -220px;
+    top: -200px;
   }
   nav a {
     display: inline-block;
