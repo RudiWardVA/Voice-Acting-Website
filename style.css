@@ -13,12 +13,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 body {
   font-family: var(--font-main);
   background: var(--main-bg);
   color: var(--text);
   line-height: 1.7;
-  scroll-behavior: smooth;
 }
 
 header {
@@ -35,8 +39,7 @@ header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('Assets/BG.jpg') center top/cover no-repeat;
-  background-size: 100% auto;
+  background: url('Assets/BG.jpg') center bottom/cover no-repeat;
   filter: blur(6px) brightness(0.35);
   z-index: 0;
 }
@@ -68,7 +71,6 @@ section {
   margin-bottom: 4rem;
   text-align: center;
   animation: fadeIn 1s ease-in-out;
-  scroll-margin-top: 120px;
 }
 
 h2 {
@@ -142,7 +144,7 @@ nav {
   position: sticky;
   top: 0;
   background: #111;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   text-align: center;
   z-index: 999;
 }
