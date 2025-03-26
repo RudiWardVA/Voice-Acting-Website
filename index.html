@@ -21,18 +21,24 @@
       line-height: 1.6;
     }
     header {
-      padding: 5rem 1rem;
+      padding: 6rem 1rem 4rem;
       text-align: center;
-      background: #1a1a1a;
+      background: linear-gradient(to bottom right, #111, #1a1a1a);
+      background-image: url('banner.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
     }
     header h1 {
       margin: 0;
       font-size: 3rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
     }
     header p {
-      color: var(--subtext);
+      color: #ddd;
       margin-top: 0.5rem;
       font-size: 1.2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
     }
     main {
       max-width: 720px;
@@ -49,6 +55,14 @@
       border-bottom: 2px solid var(--accent);
       display: inline-block;
       padding-bottom: 0.3rem;
+    }
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 1rem auto 1.5rem;
+      border: 3px solid var(--accent);
     }
     audio {
       width: 100%;
@@ -84,6 +98,7 @@
 
   <main>
     <section id="about">
+      <img src="profile.jpg" alt="Rudi Ward Headshot" class="profile-pic" />
       <h2>About Me</h2>
       <p>I'm Rudi, an 18-year-old professional Actor and Voice Actor based in Blackpool, Lancashire. I have a year of experience in acting and voice work, with a versatile style that ranges from vibrant and energetic to dark and gritty. I strive to bring every character to life with emotion and depth, using both my voice and physicality to craft compelling performances.</p>
       <p>I'm currently studying Theatre and Performance Practice at the University of Salford, developing skills in acting, directing, devising, and stagecraft. I also regularly train at The Actors Workroom, refining my technique through script reading, stage performance, and collaborative sessions.</p>
