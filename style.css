@@ -27,14 +27,14 @@ body {
 
 header {
   position: relative;
-  padding: 18rem 1rem 10rem;
+  padding: 16rem 1rem 8rem;
   text-align: center;
   color: white;
   overflow: hidden;
-  min-height: 900px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   z-index: 1;
 }
@@ -47,7 +47,6 @@ header::before {
   width: 100vw;
   height: 100%;
   background: url('Assets/BG.jpg') center center/cover no-repeat;
-  background-size: cover;
   filter: blur(6px) brightness(0.35);
   z-index: 0;
 }
@@ -62,8 +61,8 @@ header p {
 
 header h1 {
   font-size: 3.2rem;
+  margin-bottom: 0.2rem;
   margin-top: 1rem;
-  margin-bottom: 0.5rem;
 }
 
 header p {
@@ -105,15 +104,17 @@ h2::after {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
-  margin-top: -8rem;
-  transition: transform 0.3s ease;
-  position: relative;
-  z-index: 3;
+  position: absolute;
+  top: calc(50% - 80px); /* Adjusted to center vertically */
+  left: 50%;
+  transform: translate(-50%, -150%);
   background: var(--main-bg);
+  z-index: 3;
+  transition: transform 0.3s ease;
 }
 
 .profile-pic:hover {
-  transform: scale(1.05);
+  transform: translate(-50%, -150%) scale(1.05);
 }
 
 p {
@@ -179,22 +180,19 @@ nav a {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.2rem;
   }
-
   header p {
     font-size: 1rem;
   }
-
   .profile-pic {
     width: 120px;
     height: 120px;
-    margin-top: -5rem;
+    top: calc(50% - 60px);
+    transform: translate(-50%, -140%);
   }
-
   nav a {
     display: inline-block;
     margin: 0.5rem 0.5rem;
