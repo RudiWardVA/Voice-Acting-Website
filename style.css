@@ -31,19 +31,20 @@ header {
   text-align: center;
   color: white;
   overflow: hidden;
-  height: 500px;
-  max-height: 500px;
+  height: 650px;
+  max-height: 650px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('Assets/BG.jpg') center bottom/cover no-repeat;
+  background: url('Assets/BG.jpg') center bottom/contain no-repeat;
   filter: blur(6px) brightness(0.35);
   z-index: 0;
 }
@@ -51,7 +52,7 @@ header::before {
 header h1,
 header p {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -99,10 +100,10 @@ h2::after {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
-  margin: -5rem auto 2rem;
+  margin: -6rem auto 2rem;
   transition: transform 0.3s ease;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   background: var(--main-bg);
 }
 
@@ -148,18 +149,22 @@ a:hover {
 
 /* Navigation */
 nav {
-  position: sticky;
+  position: absolute;
   top: 0;
-  background: #111;
+  width: 100%;
+  background: transparent;
   padding: 0.75rem 1rem;
   text-align: center;
-  z-index: 999;
+  z-index: 4;
 }
 
 nav a {
   margin: 0 1rem;
   font-weight: bold;
   color: var(--accent);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
 }
 
 /* Animations */
