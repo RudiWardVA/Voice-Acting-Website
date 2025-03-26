@@ -2,81 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jane Doe - Voice Actor</title>
   <style>
+    :root {
+      --main-bg: #0d0d0d;
+      --accent: #ffcc00;
+      --text: #f5f5f5;
+      --subtext: #aaa;
+      --font: 'Segoe UI', sans-serif;
+    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0d0d0d;
-      color: #f5f5f5;
-      text-align: center;
+      font-family: var(--font);
+      background-color: var(--main-bg);
+      color: var(--text);
+      line-height: 1.6;
     }
-
     header {
-      padding: 4rem 1rem;
+      padding: 5rem 1rem;
+      text-align: center;
       background: #1a1a1a;
     }
-
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
-
     header p {
+      color: var(--subtext);
+      margin-top: 0.5rem;
       font-size: 1.2rem;
-      color: #ccc;
     }
-
     main {
-      padding: 2rem 1rem;
-      max-width: 600px;
+      max-width: 720px;
       margin: auto;
+      padding: 2rem 1rem;
     }
-
+    section {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
     audio {
       width: 100%;
-      margin: 1.5rem 0;
+      max-width: 500px;
+      margin: 1rem auto;
+      display: block;
     }
-
     footer {
+      text-align: center;
       padding: 2rem 1rem;
+      background: #111;
+      color: var(--subtext);
       font-size: 0.9rem;
-      color: #888;
     }
-
     a {
-      color: #ffcc00;
+      color: var(--accent);
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
+    }
+    .social-icons a {
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Jane Doe</h1>
-    <p>Voice Actor</p>
+    <p>Voice Actor | Storyteller | Vocal Chameleon</p>
   </header>
 
   <main>
-    <h2>Demo Reel</h2>
-    <audio controls>
-      <source src="demo.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi! I'm Jane, a versatile voice actor with experience in video games, animation, commercials, and narration. I specialize in character work and emotional delivery, helping bring stories and scripts to life through voice.</p>
+    </section>
 
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:jane@example.com">jane@example.com</a></p>
-    <p>Discord: JaneDoe#1234</p>
+    <section id="demo">
+      <h2>Demo Reels</h2>
+      <audio controls>
+        <source src="character-demo.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <audio controls>
+        <source src="commercial-demo.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:jane@example.com">jane@example.com</a></p>
+      <p>Discord: JaneDoe#1234</p>
+      <div class="social-icons">
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Resume</a>
+      </div>
+    </section>
   </main>
 
   <footer>
     &copy; 2025 Jane Doe. All rights reserved.
   </footer>
-
 </body>
 </html>
