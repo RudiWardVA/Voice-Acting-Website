@@ -36,6 +36,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   z-index: 1;
+  padding: 8rem 1rem 6rem;
 }
 
 header::before {
