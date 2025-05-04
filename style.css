@@ -20,8 +20,6 @@ html, body {
   line-height: 1.7;
   height: 100%;
   overflow-x: hidden; /* Ensure no horizontal scroll */
-  scroll-behavior: smooth; /* Optional, for smooth scrolling between anchors */
-  margin: 0;
 }
 
 /* Header */
@@ -29,12 +27,12 @@ header {
   position: relative;
   text-align: center;
   color: white;
-  min-height: 100vh; /* Full height of the viewport */
+  min-height: 100vh; /* Take full height of the viewport */
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center content vertically */
   align-items: center;
-  padding: 0 1rem; /* Reduced padding to avoid pushing content down */
+  padding: 0 1rem; /* Reduced padding */
   z-index: 1;
 }
 
