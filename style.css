@@ -62,13 +62,14 @@ header p {
 
 header h1 {
   font-size: 5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem; /* Reduced bottom margin */
   margin-top: 2rem;
 }
 
 header p {
   font-size: 1.3rem;
   color: var(--subtext);
+  margin-top: 0; /* Remove extra margin */
 }
 
 main {
@@ -105,12 +106,11 @@ h2::after {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
-  margin: -16rem auto 2rem;
+  margin: 2rem auto; /* Adjusted margin */
   transition: transform 0.3s ease;
   position: relative;
   z-index: 3;
   background: var(--main-bg);
-  top: -400px;
 }
 
 .profile-pic:hover {
