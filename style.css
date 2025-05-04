@@ -31,6 +31,7 @@ body {
   background: var(--main-bg);
   color: var(--text);
   line-height: 1.7;
+  overflow-x: hidden; /* Ensures no horizontal scroll */
 }
 
 /* Header Section */
@@ -42,7 +43,7 @@ header {
   height: 100vh; /* Full viewport height */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Aligns content vertically in the center */
+  justify-content: center; /* Centers the content vertically */
   align-items: center;
   z-index: 1;
   padding: 0 1rem; /* No extra padding */
@@ -65,8 +66,8 @@ header::before {
 /* Header Text Styles */
 header h1 {
   font-size: 5rem;
-  margin-top: 0; /* No margin at the top to avoid extra space */
-  margin-bottom: 0.5rem;
+  margin-top: 0; /* No margin at the top */
+  margin-bottom: 0.5rem; /* Space below the name */
   position: relative;
   z-index: 2;
   animation: fadeIn 1s ease-in-out;
@@ -87,7 +88,7 @@ header p {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
-  margin-top: 2rem; /* Adjusted for desired spacing */
+  margin-top: 1rem; /* Adjust this to control space between the name and picture */
   transition: transform 0.3s ease;
   position: relative;
   z-index: 3;
@@ -186,7 +187,7 @@ nav a {
   .profile-pic {
     width: 130px;
     height: 130px;
-    margin-top: 2rem; /* Adjusted for smaller screens */
+    margin-top: 1rem; /* Adjusted for smaller screens */
   }
   nav a {
     display: inline-block;
