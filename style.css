@@ -13,43 +13,31 @@
   box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%; /* Ensures full page height */
-}
-
-/* Ensures the page scrolls to the top on load */
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 0; /* Ensures no offset at the top */
+  scroll-behavior: smooth; /* Ensures smooth scrolling */
 }
 
-/* Body */
 body {
   font-family: var(--font-main);
   background: var(--main-bg);
   color: var(--text);
   line-height: 1.7;
-  overflow-x: hidden; /* Ensures no horizontal scroll */
+  height: 100%; /* Ensure body takes full height */
 }
 
-/* Header Section */
 header {
   position: relative;
+  height: 100vh; /* Take full height of viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center;
   text-align: center;
   color: white;
   overflow: hidden;
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centers the content vertically */
-  align-items: center;
   z-index: 1;
-  padding: 0 1rem; /* No extra padding */
 }
 
-/* Background for the header */
 header::before {
   content: "";
   position: absolute;
@@ -63,51 +51,45 @@ header::before {
   z-index: 0;
 }
 
-/* Header Text Styles */
-header h1 {
-  font-size: 5rem;
-  margin-top: 0; /* No margin at the top */
-  margin-bottom: 0.5rem; /* Space below the name */
+header h1,
+header p {
   position: relative;
   z-index: 2;
   animation: fadeIn 1s ease-in-out;
+  margin: 0.5rem 0;
+}
+
+header h1 {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
 }
 
 header p {
   font-size: 1.3rem;
   color: var(--subtext);
-  position: relative;
-  z-index: 2;
-  animation: fadeIn 1s ease-in-out;
 }
 
-/* Profile Picture */
 .profile-pic {
   width: 260px;
   height: 260px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
-  margin-top: 1rem; /* Adjust this to control space between the name and picture */
+  margin-top: 20px; /* Adjust to move the image down */
   transition: transform 0.3s ease;
-  position: relative;
   z-index: 3;
-  background: var(--main-bg);
 }
 
-/* Hover Effect for Profile Picture */
 .profile-pic:hover {
   transform: scale(1.05);
 }
 
-/* Main Section */
 main {
   max-width: 960px;
   margin: auto;
   padding: 2rem 1rem;
 }
 
-/* Section Styles */
 section {
   margin-bottom: 4rem;
   text-align: center;
@@ -130,7 +112,6 @@ h2::after {
   background: var(--accent);
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
@@ -150,7 +131,11 @@ a:hover {
   color: #fff;
 }
 
-/* Navigation */
+.social-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.3rem;
+}
+
 nav {
   position: absolute;
   top: 1rem;
@@ -171,12 +156,12 @@ nav a {
   font-size: 0.95rem;
 }
 
-/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.2rem;
@@ -187,7 +172,7 @@ nav a {
   .profile-pic {
     width: 130px;
     height: 130px;
-    margin-top: 1rem; /* Adjusted for smaller screens */
+    margin-top: 20px; /* Adjust to move the image down */
   }
   nav a {
     display: inline-block;
