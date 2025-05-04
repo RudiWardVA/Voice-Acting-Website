@@ -14,7 +14,7 @@
 }
 
 html {
-  scroll-behavior: smooth; /* Ensures smooth scrolling */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,20 +22,21 @@ body {
   background: var(--main-bg);
   color: var(--text);
   line-height: 1.7;
-  height: 100%; /* Ensure body takes full height */
+  overflow-x: hidden;
 }
 
 header {
   position: relative;
-  height: 100vh; /* Take full height of viewport */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center;
   text-align: center;
   color: white;
   overflow: hidden;
+  min-height: 500px; /* Adjust height to avoid unnecessary space */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ensure the content stays towards the top */
+  align-items: center;
   z-index: 1;
+  padding: 4rem 1rem; /* Adjust padding to fit the content properly */
 }
 
 header::before {
@@ -60,7 +61,7 @@ header p {
 }
 
 header h1 {
-  font-size: 5rem;
+  font-size: 3rem; /* Adjust font size for better scaling */
   margin-bottom: 0.5rem;
 }
 
@@ -70,14 +71,16 @@ header p {
 }
 
 .profile-pic {
-  width: 260px;
-  height: 260px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
-  margin-top: 20px; /* Adjust to move the image down */
+  margin: 1rem auto; /* Center and add space from the name */
   transition: transform 0.3s ease;
+  position: relative;
   z-index: 3;
+  background: var(--main-bg);
 }
 
 .profile-pic:hover {
@@ -136,6 +139,7 @@ a:hover {
   font-size: 1.3rem;
 }
 
+/* Navigation */
 nav {
   position: absolute;
   top: 1rem;
@@ -156,12 +160,12 @@ nav a {
   font-size: 0.95rem;
 }
 
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.2rem;
@@ -172,7 +176,7 @@ nav a {
   .profile-pic {
     width: 130px;
     height: 130px;
-    margin-top: 20px; /* Adjust to move the image down */
+    margin-top: 1rem;
   }
   nav a {
     display: inline-block;
