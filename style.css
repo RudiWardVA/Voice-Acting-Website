@@ -14,7 +14,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  height: 100%;
+  scroll-behavior: smooth; /* For smooth scrolling only */
 }
 
 body {
@@ -23,6 +24,7 @@ body {
   color: var(--text);
   line-height: 1.7;
   overflow-x: hidden;
+  height: 100%;
 }
 
 header {
@@ -36,7 +38,7 @@ header {
   justify-content: flex-start; /* Ensure the content stays towards the top */
   align-items: center;
   z-index: 1;
-  padding: 4rem 1rem; /* Adjust padding to fit the content properly */
+  padding: 3rem 1rem; /* Adjust padding to fit the content properly */
 }
 
 header::before {
