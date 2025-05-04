@@ -111,6 +111,7 @@ h2::after {
   position: relative;
   z-index: 3;
   background: var(--main-bg);
+  top: -350px;
 }
 
 .profile-pic:hover {
