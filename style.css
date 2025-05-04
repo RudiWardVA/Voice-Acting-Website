@@ -15,7 +15,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 0; /* Remove any additional scroll padding */
 }
 
 body {
@@ -23,6 +23,7 @@ body {
   background: var(--main-bg);
   color: var(--text);
   line-height: 1.7;
+  margin: 0; /* Ensure no default margin */
 }
 
 header {
@@ -30,13 +31,13 @@ header {
   text-align: center;
   color: white;
   overflow: hidden;
-  min-height: 1000px;
+  min-height: 100vh; /* Full height of the viewport */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start; /* Align at the top of the page */
   align-items: center;
   z-index: 1;
-  padding: 0rem 0rem 0rem;
+  padding: 0; /* Remove all padding */
 }
 
 header::before {
@@ -106,12 +107,10 @@ h2::after {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
-  margin: 0 auto;
+  margin-top: 2rem; /* Adjusted the margin-top to push the profile picture down */
   transition: transform 0.3s ease;
-  position: relative;
   z-index: 3;
   background: var(--main-bg);
-  top: -160px; /* Adjust top position to move profile picture up */
 }
 
 .profile-pic:hover {
@@ -191,8 +190,7 @@ nav a {
   .profile-pic {
     width: 130px;
     height: 130px;
-    margin-top: -4rem;
-    top: -220px;
+    margin-top: 2rem; /* Adjust for mobile view as well */
   }
   nav a {
     display: inline-block;
