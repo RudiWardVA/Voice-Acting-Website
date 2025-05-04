@@ -106,12 +106,12 @@ h2::after {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
-  margin: 2rem auto; /* Adjusted margin */
+  margin: 0 auto;
   transition: transform 0.3s ease;
   position: relative;
   z-index: 3;
   background: var(--main-bg);
-  top: -350px;
+  top: -160px; /* Adjust top position to move profile picture up */
 }
 
 .profile-pic:hover {
